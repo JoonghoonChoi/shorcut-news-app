@@ -1,2 +1,2 @@
-# shorcut-news-app-flask-heroku
+# shorcut-news-app
 https://shortcut-news.herokuapp.com
