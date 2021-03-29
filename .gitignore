@@ -1,0 +1,6 @@
+.vscode
+dev-app.ipynb
+Sentiment-clf.ipynb
+*.pickle
+.DS_Store
+__pycache__

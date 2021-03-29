@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title  %}
+<<<<<<< HEAD
+<strong>NEWS CHANNEL LIST</strong>
+{% endblock  %}
+
+{% block lead  %}
+{% endblock  %}
+e
+{% block main_body  %}
+Welcome to my first web edition.
+<br>
+This service is developed by using Twittr API, not for commercial.
+<br>
+<br>
+=======
+News Channel List
+{% endblock  %}
+
+{% block lead  %}
+Welcome to my first web edition.
+<br>
+This service is developed by using Twittr API, not for commercial.
+{% endblock  %}
+
+{% block main_body  %}
+>>>>>>> a431da0 (heroku deploy version)
+<table class="table">
+    <tr class='table__header'>
+        {% for head in header %}
+        <th class='table__cell'> {{head}} </th>
+        {% endfor %}
+    </tr>
+        {% for row in data%}
+        <tr class='table__row'>
+            {% for cell in row %}
+            <td class='table__cell'> {{cell}} </td>
+            {% endfor %}
+        {% endfor %}
+        </tr>
+</table>
+<<<<<<< HEAD
+
+=======
+>>>>>>> a431da0 (heroku deploy version)
+{% endblock  %}
+

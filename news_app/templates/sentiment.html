@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title  %}
+Positive or Negative
+{% endblock  %}
+
+{% block lead  %}
+<<<<<<< HEAD
+Sentimental Analysis of Today's News Headlines 
+{% endblock  %}
+
+{% block main_body  %}
+Please update for using data in real time
+<form method="POST" action="/api/sentiment">
+    <input type="submit" class="btn btn-primary" value="Update" />
+</form>
+=======
+Sentimental Analysis of Today's News Headlines
+<br>
+Please update for using data in real time
+
+{% endblock  %}
+
+{% block main_body  %}
+<form method="POST" action="/api/sentiment">
+    <input type="submit" class="btn btn-primary" value="Update" />
+</form>
+<br>
+<br>
+>>>>>>> a431da0 (heroku deploy version)
+<table class="table">
+    <tr class='table__header'>
+        {% for head in header %}
+        <th class='table__cell'> {{head}} </th>
+        {% endfor %}
+    </tr>
+        {% for row in data%}
+        <td class='table__cell'> {{row}} </td>
+        {% endfor %}
+        </tr>
+</table>
+{% endblock  %}

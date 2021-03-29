@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    {% block head %} 
+    {% endblock %}
+  </head>
+<<<<<<< HEAD
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+=======
+  <body style="background: url(https://images.idgesg.net/images/article/2018/08/1_network_internet_connected_grid_earth_power_satellite-view-100769192-large.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
+>>>>>>> a431da0 (heroku deploy version)
+      <a class="navbar-brand" href="#">Shortcut News</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<<<<<<< HEAD
+        <ul class="navbar-nav mr-auto">
+=======
+        <ul class="navbar-nav ml-auto">
+>>>>>>> a431da0 (heroku deploy version)
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/news">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sentiment">Sentiment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/feedback">Feedback</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    {% block alert %}
+    {% endblock %}
+<<<<<<< HEAD
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">{% block title %}{% endblock %}</h1>
+        <p class="lead">{% block lead %}{% endblock %}</p>
+        <hr class="my-4">
+        <p>{% block main_body %}{% endblock %}</p>
+      </div>
+    </div>
+=======
+
+    {% block blank %}
+    <br>
+    <br>
+    {% endblock %}
+
+    <div class="container">
+      <div class="jumbotron">  
+        <h1 class="display-4">{% block title %}{% endblock %}</h1>
+        <p class="lead">{% block lead %}{% endblock %}</p>
+        <hr class="my-4">
+        <p class="lead mb-4">{% block main_body %}{% endblock %}</p>
+      </div>
+    </div>    
+
+>>>>>>> a431da0 (heroku deploy version)
+  </body>
+</html>

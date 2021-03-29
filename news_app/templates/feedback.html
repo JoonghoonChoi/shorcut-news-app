@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block alert %}
+{% if alert_msg %}
+<div class="alert alert-{{ alert_msg.type }}" role="alert">
+  {{ alert_msg.msg }}
+</div>
+{% endif %}
+{% endblock %}
+
+{% block title %}
+Feedback
+{% endblock %}
+
+{% block lead %}
+Any feedback is welcome and appreciated
+{% endblock %}
+
+{% block main_body %}
+<form method="POST" action="/api/feedback">
+  <input name="feedback_text" style="margin-bottom:10px" class="form-control" type="text" placeholder="Please enter your feedback here!">
+  <input type="submit" class="btn btn-primary" value="Post" />
+</form>
+
+{% if feedback_lst %}
+<br>
+<br>
+<table class="table">
+  <thead>
+    <tr></tr>
+      <th scope="col">#</th>
+      <th scope="col">Comments</th>
+      <th scope="col">Posted_Date</th>
+    </tr>
+  </thead>
+  
+  </tbody>
+  <tbody>
+    {% for feedback in feedback_lst %}
+    <tr>
+      <th scope="row">{{ feedback.id }}</th>
+        <td>{{ feedback.text}}</td>
+        <td>{{ feedback.datetime}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+{% endblock %}

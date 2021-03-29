@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block alert %}
+{% if alert_msg %}
+<div class="alert alert-{{ alert_msg.type }}" role="alert">
+  {{ alert_msg.msg }}
+</div>
+{% endif %}
+{% endblock %}
+
+{% block title %}
+Updated News
+{% endblock %}
+
+{% block lead %}
+<<<<<<< HEAD
+Add/update news channel you want to read
+{% endblock %}
+
+{% block main_body %}
+=======
+Find the latest 10 news headlines!
+<br>
+Add/update news channel you want to read
+
+{% endblock %}
+{% block main_body %}
+
+>>>>>>> a431da0 (heroku deploy version)
+<form method="POST" action="/api/news">
+  <input name="newsname" style="margin-bottom:10px" class="form-control" type="text" placeholder="Enter twitter screen name of news channel">
+  <input type="submit" class="btn btn-primary" value="Add" />
+</form>
+
+{% if timeline_lst %}
+<<<<<<< HEAD
+=======
+<br>
+<br>
+>>>>>>> a431da0 (heroku deploy version)
+<table class="table">
+  <thead>
+    <tr></tr>
+      <th scope="col">#</th>
+      <th scope="col">News Channel</th>
+      <th scope="col">Headline</th>
+      <th scope="col">Link</th>
+    </tr>
+  </thead>
+  
+  </tbody>
+  <tbody>
+    {% for timeline in timeline_lst %}
+    <tr>
+      <th scope="row">{{ timeline.id }}</th>
+        <td>{{ timeline.username}}</td>
+        <td>{{ timeline.headline}}</td>
+        <td><a href="{{ timeline.link }}">{{ timeline.link }}</a></td>
+        <td>
+          <a class="btn btn-secondary", href='/api/news/{{ timeline.id}}'>
+          Delete
+          </a>
+        </td>
+    </tr>
+<<<<<<< HEAD
+      {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+=======
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+>>>>>>> a431da0 (heroku deploy version)
+{% endblock %}
