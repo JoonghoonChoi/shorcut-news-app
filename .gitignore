@@ -4,3 +4,4 @@ Sentiment-clf.ipynb
 *.pickle
 .DS_Store
 __pycache__
+.env
