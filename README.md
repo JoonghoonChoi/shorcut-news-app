@@ -1,5 +1,5 @@
-# shorcut-news-app
-https://shortcut-news.herokuapp.com
+# Shorcut-news Web Application Project
+[Go to heroku web application](https://shortcut-news.herokuapp.com)
 
 <br>
 
